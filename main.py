@@ -39,7 +39,10 @@ def guess_letter(word: str) -> bool:
         if guess.lower() in word.lower():
             GUESSED_LETTERS.append(guess.lower())
             return True
-        return False
+    else:
+        print(f"Es muss exakt ein Buchstabe eingegeben werden, eingeben wurde: '{guess}'.")
+        return True
+    return False
 
 
 if __name__ == "__main__":
